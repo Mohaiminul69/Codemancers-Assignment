@@ -5,7 +5,7 @@ import "./inputFiled.css";
 const InputField = ({ handlePostMessage }) => {
   return (
     <div>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 messageBox">
         {/* <Form.Label>Share your thoughts</Form.Label> */}
         <Form.Control
           placeholder="Whats on your mind?"

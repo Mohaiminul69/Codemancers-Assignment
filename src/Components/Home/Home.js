@@ -5,25 +5,31 @@ import "./home.css";
 import Post from "./Post/Post";
 
 const Home = () => {
+  const [showGifBox, setShowGifBox] = useState(false);
   const [postMessage, setPostMessage] = useState("");
   const [selectedGIf, setSelectedGIf] = useState("");
   const [posts, setPosts] = useState([]);
 
   const handlePost = () => {
-    console.log("post");
+    setPosts([...posts, { postMessage, selectedGIf }]);
+    setPostMessage("");
+    setSelectedGIf("");
+    setShowGifBox(false);
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="my-5">
       <PostInput
         selectedGIf={selectedGIf}
         setSelectedGIf={setSelectedGIf}
         postMessage={postMessage}
         setPostMessage={setPostMessage}
         handlePost={handlePost}
+        showGifBox={showGifBox}
+        setShowGifBox={setShowGifBox}
       />
-      {posts.map((post) => (
-        <Post postMessage={postMessage} selectedGIf={selectedGIf} />
+      {posts.map((post, index) => (
+        <Post key={index} post={post} />
       ))}
     </Container>
   );

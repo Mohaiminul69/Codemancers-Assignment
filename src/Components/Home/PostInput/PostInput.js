@@ -9,9 +9,9 @@ const PostInput = ({
   setSelectedGIf,
   setPostMessage,
   handlePost,
+  showGifBox,
+  setShowGifBox,
 }) => {
-  const [showGifBox, setShowGifBox] = useState(false);
-
   const handlePostMessage = (e) => {
     setPostMessage(e.target.value);
   };
@@ -33,18 +33,18 @@ const PostInput = ({
     <div className="mt-5 w-50 bgGrey p-3 rounded-3">
       <InputField handlePostMessage={handlePostMessage} />
       {selectedGIf && (
-        <div className="selectedGif mt-3">
+        <div className="selectedGif my-3">
           <img src={selectedGIf} alt="" />
         </div>
       )}
-      <Button className="mt-3" onClick={handleShowGifBox} variant="light">
+      <Button onClick={handleShowGifBox} variant="success">
         GIF
       </Button>
       {showGifBox && !selectedGIf && (
         <GifBox handleGifSelect={handleGifSelect} />
       )}
       <div className="d-flex justify-content-end">
-        <Button onClick={handlePost} variant="primary" className="mt-2">
+        <Button onClick={handlePost} variant="primary" className="mt-3 w-100">
           Post
         </Button>
       </div>
