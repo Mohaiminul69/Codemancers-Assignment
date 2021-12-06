@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Container, FormControl, InputGroup } from "react-bootstrap";
+import { FormControl, InputGroup } from "react-bootstrap";
 import Gif from "./Gifs/Gif";
 import "./gifBox.css";
 
-const GifBox = () => {
+const GifBox = ({ handleGifSelect }) => {
   const [gifKeyWord, setGifKeyWord] = useState([]);
   const [gifs, setGifs] = useState([]);
 
@@ -20,7 +20,7 @@ const GifBox = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <div className="mt-3">
       <InputGroup className="mb-3">
         <FormControl
           placeholder="Whats on your mind?"
@@ -31,12 +31,18 @@ const GifBox = () => {
         />
       </InputGroup>
 
-      <div className="gifDiv">
-        {gifs.map((gif) => (
-          <Gif key={gif.images.downsized.url} gif={gif.images.downsized.url} />
-        ))}
-      </div>
-    </Container>
+      {gifs.length !== 0 && (
+        <div className="gifDiv">
+          {gifs.map((gif) => (
+            <Gif
+              key={gif.images.downsized.url}
+              gif={gif.images.downsized.url}
+              handleGifSelect={handleGifSelect}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
