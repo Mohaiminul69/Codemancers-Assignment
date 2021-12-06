@@ -1,9 +1,19 @@
 import React from "react";
+import { Form } from "react-bootstrap";
+import "./inputFiled.css";
 
-const InputField = () => {
+const InputField = ({ handlePostMessage }) => {
   return (
     <div>
-      <h1>Hello</h1>
+      <Form.Group className="mb-3">
+        {/* <Form.Label>Share your thoughts</Form.Label> */}
+        <Form.Control
+          placeholder="Whats on your mind?"
+          as="textarea"
+          onBlur={handlePostMessage}
+          rows={3}
+        />
+      </Form.Group>
     </div>
   );
 };

@@ -23,8 +23,7 @@ const GifBox = ({ handleGifSelect }) => {
     <div className="mt-3">
       <InputGroup className="mb-3">
         <FormControl
-          placeholder="Whats on your mind?"
-          aria-label="Recipient's username"
+          placeholder="Search for gifs"
           //   Change to on Change
           onBlur={handleSearch}
           aria-describedby="basic-addon2"
