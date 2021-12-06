@@ -1,0 +1,6 @@
+.gifDiv {
+  width: 230px;
+  height: 300px;
+  overflow: scroll;
+  border: 5px solid black;
+}
