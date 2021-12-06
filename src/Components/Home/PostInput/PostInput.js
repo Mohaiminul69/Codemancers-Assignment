@@ -7,6 +7,7 @@ import InputField from "./InputField/InputField";
 const PostInput = ({
   selectedGIf,
   setSelectedGIf,
+  postMessage,
   setPostMessage,
   handlePost,
   showGifBox,
@@ -43,8 +44,14 @@ const PostInput = ({
       {showGifBox && !selectedGIf && (
         <GifBox handleGifSelect={handleGifSelect} />
       )}
+      {console.log(selectedGIf, postMessage)}
       <div className="d-flex justify-content-end">
-        <Button onClick={handlePost} variant="primary" className="mt-3 w-100">
+        <Button
+          onClick={handlePost}
+          disabled={!selectedGIf || !postMessage ? true : false}
+          variant="primary"
+          className="mt-3 w-100"
+        >
           Post
         </Button>
       </div>
