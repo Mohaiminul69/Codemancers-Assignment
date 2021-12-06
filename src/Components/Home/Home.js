@@ -15,6 +15,7 @@ const Home = () => {
     setPostMessage("");
     setSelectedGIf("");
     setShowGifBox(false);
+    document.getElementById("messageInput").value = "";
   };
 
   return (

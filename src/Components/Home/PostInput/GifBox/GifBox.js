@@ -25,8 +25,7 @@ const GifBox = ({ handleGifSelect }) => {
         <FormControl
           className="postMessageInput"
           placeholder="Search for gifs"
-          //   Change to on Change
-          onBlur={handleSearch}
+          onChange={handleSearch}
         />
       </InputGroup>
 

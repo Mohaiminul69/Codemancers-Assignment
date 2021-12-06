@@ -8,6 +8,7 @@ const InputField = ({ handlePostMessage }) => {
       <Form.Group className="mb-3 messageBox">
         {/* <Form.Label>Share your thoughts</Form.Label> */}
         <Form.Control
+          id="messageInput"
           placeholder="Whats on your mind?"
           as="textarea"
           onBlur={handlePostMessage}

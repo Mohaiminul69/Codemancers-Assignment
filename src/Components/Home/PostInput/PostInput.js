@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import GifBox from "./GifBox/GifBox";
 import "./postInput.css";
