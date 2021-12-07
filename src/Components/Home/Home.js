@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center">
+    <Container className="pb-5 pt-2 d-flex flex-column align-items-center">
       <PostInput
         selectedGIf={selectedGIf}
         setSelectedGIf={setSelectedGIf}

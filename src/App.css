@@ -1,0 +1,7 @@
+.App {
+  background: #95d1cc;
+  min-height: 100vh;
+}
+.customBtn {
+  padding: 5px 25px !important;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import GifBox from "./GifBox/GifBox";
-import "./postInput.css";
 import InputField from "./InputField/InputField";
+import "./postInput.css";
 
 const PostInput = ({
   selectedGIf,
@@ -38,7 +38,11 @@ const PostInput = ({
           <img src={selectedGIf} alt="" />
         </div>
       )}
-      <Button onClick={handleShowGifBox} variant="success">
+      <Button
+        className="customBtn"
+        onClick={handleShowGifBox}
+        variant="success"
+      >
         GIF
       </Button>
       {showGifBox && !selectedGIf && (
