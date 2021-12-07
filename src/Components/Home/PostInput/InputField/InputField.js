@@ -11,7 +11,7 @@ const InputField = ({ handlePostMessage }) => {
           id="messageInput"
           placeholder="Whats on your mind?"
           as="textarea"
-          onBlur={handlePostMessage}
+          onChange={handlePostMessage}
           rows={3}
         />
       </Form.Group>
